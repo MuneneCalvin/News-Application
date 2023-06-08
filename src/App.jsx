@@ -1,16 +1,15 @@
 import './App.css';
-import NavBar from './components/NavBar';
-import News from './components/News';
+import Navbar from './Components/Navbar';
+import News from './Components/News';
 import { Routes, Route,} from "react-router-dom";
 import About from './components/About';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <BrowserRouter>
-      <navbar/>
+      <Navbar/>
       <Routes>
           <Route path="/"  element={<News pageSize={PageSize} country="in" category="general"/>} />
           <Route path="/about"  element={<About/>} />
